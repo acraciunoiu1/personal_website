@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* Neon-sign flicker for the "Now" timeline label. */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flicker {
+    animation: flicker 3s linear infinite;
+  }
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
